@@ -1,0 +1,33 @@
+<!-- This is the header section of the webpage -->
+<header class="header">
+  <!-- The aglet-menu div contains the navigation menu -->
+  <div class="aglet-menu">
+    <nav>
+      <!-- The logo-aglet div contains the logo and its link -->
+      <div class="logo-aglet">
+        <a routerLink="/">
+          <!-- The image of the logo with a specified width and alt attribute -->
+          <img
+            src="assets/aglet_logo.svg"
+            class=""
+            style="width: 100px;"
+            alt="logo"
+          />
+        </a>
+      </div>
+
+      <!-- The aglet-menu-items div contains the menu items and the line separator -->
+      <div class="aglet-menu-items">
+        <!-- The unordered list (ul) contains the list of menu items -->
+        <ul class="">
+          <!-- The first list item contains a link to the home page -->
+          <li><a class="menu-item" routerLink="">Home</a></li>
+          <!-- The second list item contains a link to the contacts page -->
+          <li><a class="menu-item" routerLink="/contacts">Contact</a></li>
+        </ul>
+        <!-- The line separator dividing the logo and menu items -->
+        <div class="line"></div>
+      </div>
+    </nav>
+  </div>
+</header>

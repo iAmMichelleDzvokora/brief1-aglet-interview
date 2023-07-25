@@ -1,0 +1,42 @@
+
+body {
+	font-family: 'Barlow', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+	line-height: 1.8;
+	font-weight: 400;
+	color: #fff;
+	background: #000;
+	border-color: #dfdfdf;
+ transition: transform ease-in .4s;
+	overflow: hidden;
+}
+
+img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	transition: 0.5s;
+}
+
+.img-bottom {
+	position: absolute;
+	top: 54%;
+	width: 100%;
+	background-color: #000;
+	opacity: 0.7;
+	padding: 25px 0px;
+	display: none;
+	transition: 0.5s;
+	text-align: center;
+}
+.img-bottom li {
+	list-style: none;
+	display: inline-block;
+}
+.img-bottom li i {
+	color: #fff;
+	padding: 0px 10px;
+}
+

@@ -1,0 +1,35 @@
+<div class="video-carousel-container" (scroll)="onCarouselScroll($event)">
+  <div class="video-carousel">
+    <div *ngFor="let video of videos; let i = index">
+      <div class="container" (mouseenter)="onHover(i)" (mouseleave)="onLeave(i)">
+        <!-- Image -->
+        <div class="image-container" *ngIf="!showVideo">
+          <img [src]="video.thumbnail" alt="Video Thumbnail"/>
+        </div>
+
+        <!-- Video Player -->
+        <video id="videoPlayer" #videoElement>
+          <source [src]="video.url" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-text">
+          <p>{{video.text}}</p>
+        </div>
+        <div class="subtitle">
+          <p>{{video.subtitle}}</p>
+        </div>
+       
+      </div>
+   
+    </div>
+    
+  </div>
+</div>
+
+ <!-- Custom Horizontal Progress Bar -->
+<div class="center-container">
+  <div class="progress-bar-container">
+    <div class="progress" [style.width]="progressWidth"></div>
+  </div>
+</div>
+

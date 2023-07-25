@@ -1,0 +1,108 @@
+.video-carousel-container {
+  padding: 20px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  
+}
+
+.subtitle{
+  color: gray;
+}
+
+.progress-bar-container {
+  align-items: center;
+  width: 18%;
+  height: 0.5px;
+  background-color: gray;
+  /* Add any other styling for the container */
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  align-items: center;
+  height: 100%; /* Optional: Adjust the height based on your design */
+}
+
+.progress {
+  height: 100%;
+  background-color: white;
+  /* Add any other styling for the progress bar */
+}
+
+.video-carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.video-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0px; /* Add a gap between images (optional) */
+  height: 500px;
+}
+
+.video-text {
+  margin-top: 120px;
+    font-size: 21px;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+
+}
+
+.video-thumbnail {
+  position: relative;
+  cursor: pointer;
+  flex: 0 0 auto; /* Prevent images from shrinking and growing */
+}
+
+.video-thumbnail img {
+  width: 200px;
+  height: 150px;
+  transition: filter 0.3s ease-in-out;
+}
+
+.video-thumbnail video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-thumbnail:hover img {
+  filter: brightness(50%);
+}
+
+$aspect-ratio: 640 / 360;
+
+.container {
+  position: relative;
+  width: 400px; // Set the container width to your desired size
+  height: 0; // Set initial height to 0 to maintain the aspect ratio
+  padding-top: calc(60% / #{$aspect-ratio}); // Calculate the height based on the aspect ratio
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+img {
+  object-fit: fit; // Maintain aspect ratio for the image
+}
+
+#videoPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+}

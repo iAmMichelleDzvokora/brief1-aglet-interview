@@ -1,0 +1,18 @@
+
+.main-banner .slick-slider .slick-track, .main-banner .slick-slider .slick-list {
+	display: flex;
+}
+.section-padding.section {
+	padding-bottom: 50px;
+}
+.pagination_layout{
+	margin-top: -30px;
+}
+
+@media (max-width: 992px){
+	.menu-item-has-children .submenu .menu-item-has-children>a>.arrow:after{
+		transform: none;
+		right: 15px;
+   }
+
+}
